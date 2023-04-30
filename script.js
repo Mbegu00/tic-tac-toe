@@ -34,7 +34,6 @@ cells.forEach(cell => {
 });
 
 function checkWin() {
-//en base a nuestra constante winConditions verificamos si la posición del tablero muestra alguna victoria.
   return winConditions.some(condition => {
     return condition.every(index => {
       return cells[index].textContent === currentPlayer;
@@ -43,7 +42,6 @@ function checkWin() {
 }
 
 function checkTie() {
-//en base a nuestras celdas del tablero verificamos que todas las celdas estén ocupadas por alguna ficha.
   return Array.from(cells).every(cell => {
     return cell.textContent !== "";
   });
